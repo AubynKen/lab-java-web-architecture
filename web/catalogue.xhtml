@@ -19,28 +19,30 @@
         <ui:define name="content">
             <div id="product-container" class="container card-container">
                 <div class="row">
-                    
+
                     <ui:repeat value="#{catalogueManager.products}" var="item">
-                        
+
                         <div class="col-4">
                             <div class="card">
                                 <div class="img-container">
                                     <img src="#{item.imageURI}" class="card-img-top" alt="..."/>
                                 </div>
-                                
+
                                 <div class="card-body" style="margin-bottom: auto;">
                                     <h5 class="card-title">${item.name}</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">${item.price} €</h6>
                                     <p class="card-text">${item.description}</p>
                                     <div class="mt-auto">
-                                        <a href="#" class="btn btn-primary">Visit</a>
+                                        <h:form>
+                                            <h:commandButton value="Click Me" styleClass="btn btn-primary" action="#{yourBean.yourMethod}" />
+                                        </h:form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </ui:repeat>
-                    
+
                 </div>
             </div>
 

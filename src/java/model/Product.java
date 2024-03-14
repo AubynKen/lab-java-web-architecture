@@ -1,10 +1,12 @@
 package model;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Product implements Serializable {
 
     // for version compatibility good practice
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Integer id;
@@ -47,11 +49,11 @@ public class Product implements Serializable {
     public void setImageURI(String imageURI) {
         this.imageURI = imageURI;
     }
-    
+
     public String getDescription() {
         return description;
     }
-    
+
     public void setDescription(String description) {
         this.description = description;
     }
