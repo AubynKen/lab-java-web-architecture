@@ -50,7 +50,7 @@ public class ShoppingCartManager implements Serializable {
 
         // check if the product is already in the cart, and add quantity if it is
         for (var item: items) {
-            if (product.getId().equals(item.getId())) {
+            if (product.getId().equals(item.getProduct().getId())) {
                 item.setQuantity(item.getQuantity() + 1);
                 return "goToShoppingCart";
             }
@@ -58,7 +58,6 @@ public class ShoppingCartManager implements Serializable {
 
         // if the product is not in the cart, add it
         var item = new ShoppingCartItem();
-        item.setId(product.getId());
         item.setQuantity(1);
         item.setProduct(product);
         items.add(item);

@@ -3,76 +3,76 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      >
+>
 
 
-    <ui:composition template="layout.xhtml">
-        <ui:define name="links">
-            <link rel="stylesheet" href="shopping-cart.css"/>
-        </ui:define>
-        <ui:define name="title">Your Cart</ui:define>
-        <ui:define name="content">
-
-            <div class="container container-sm" style="margin-top: 5rem;">
-                <h:dataTable value = "#{shoppingCartManager.items}" var = "item" styleClass = "table" 
-                             style="color: white; opacity: 0.85;">
-                    <h:column>    				
-                        <f:facet name = "header">Product Id</f:facet>    				
-                            #{item.id}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name = "header">Product Name</f:facet>
-                            #{item.product.name}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name="header">Quantity</f:facet>
-                            #{item.quantity}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name = "header">Unit Price</f:facet>
-                            #{item.product.price}
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name = "header">Total Price</f:facet>
-                            #{item.product.price * item.quantity}
-                    </h:column>
-                </h:dataTable>
-
-                <!--                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">Larry the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                    </tbody>
-                </table></div>-->
-            </div>
-
-
-        </ui:define>
-    </ui:composition>
+<ui:composition template="layout.xhtml">
+  <ui:define name="links">
+    <link rel="stylesheet" href="style/shopping-cart.css"/>
+  </ui:define>
+  <ui:define name="title">Your Cart</ui:define>
+  <ui:define name="content">
+    
+    <div class="container container-sm" style="margin-top: 5rem; background-color: black;">
+      <h:dataTable value="#{shoppingCartManager.items}" var="item" styleClass="table"
+                   style="color: white; opacity: 0.85;">
+        <h:column>
+          <f:facet name="header">Product Id</f:facet>
+          #{item.id}
+        </h:column>
+        
+        <h:column>
+          <f:facet name="header">Product Name</f:facet>
+          #{item.product.name}
+        </h:column>
+        
+        <h:column>
+          <f:facet name="header">Quantity</f:facet>
+          #{item.quantity}
+        </h:column>
+        
+        <h:column>
+          <f:facet name="header">Unit Price</f:facet>
+          #{item.product.price}
+        </h:column>
+        
+        <h:column>
+          <f:facet name="header">Total Price</f:facet>
+          #{item.product.price * item.quantity}
+        </h:column>
+      </h:dataTable>
+      
+      <!--                <table class="table">
+                          <thead>
+                              <tr>
+                                  <th scope="col">First</th>
+                                  <th scope="col">Last</th>
+                                  <th scope="col">Handle</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                              </tr>
+                              <tr>
+                                  <td colspan="2">Larry the Bird</td>
+                                  <td>@twitter</td>
+                              </tr>
+                          </tbody>
+      </table></div>-->
+    </div>
+  
+  
+  </ui:define>
+</ui:composition>
 
 </html>

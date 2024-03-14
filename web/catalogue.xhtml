@@ -3,50 +3,52 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      >
+>
 
 
-    <ui:composition template="layout.xhtml">
-
-        <ui:define name="links">
-            <link rel="stylesheet" href="catalogue.css"/>
-        </ui:define>
-
-        <ui:define name="title">Catalogue</ui:define>
-
-        <ui:define name="content">
-            <div id="product-container" class="container card-container">
-                <div class="row">
-
-                    <ui:repeat value="#{catalogueManager.products}" var="item">
-
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="img-container">
-                                    <img src="#{item.imageURI}" class="card-img-top" alt="..."/>
-                                </div>
-
-                                <div class="card-body" style="margin-bottom: auto;">
-                                    <h5 class="card-title">${item.name}</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">${item.price} €</h6>
-                                    <p class="card-text">${item.description}</p>
-                                    <div class="mt-auto">
-                                        <h:form>
-                                            <h:commandButton value="Click Me" styleClass="btn btn-primary" action="#{yourBean.yourMethod}" />
-                                        </h:form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </ui:repeat>
-
+<ui:composition template="layout.xhtml">
+  
+  <ui:define name="links">
+    <link rel="stylesheet" href="style/catalogue.css"/>
+  </ui:define>
+  
+  <ui:define name="title">Catalogue</ui:define>
+  
+  <ui:define name="content">
+    <div id="product-container" class="container card-container">
+      <div class="row">
+        
+        <ui:repeat value="#{catalogueManager.products}" var="item">
+          
+          <div class="col-4">
+            <div class="card">
+              <div class="img-container">
+                <img src="#{item.imageURI}" class="card-img-top" alt="..."/>
+              </div>
+              
+              <div class="card-body" style="margin-bottom: auto;">
+                <h5 class="card-title">${item.name}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${item.price} €</h6>
+                <p class="card-text">${item.description}</p>
+                <div class="mt-auto">
+                  <h:form>
+                    <h:commandButton
+                        value="Add To Cart" styleClass="btn btn-primary"
+                        action="#{shoppingCartManager.addItem(item)}"/>
+                  </h:form>
                 </div>
+              </div>
             </div>
-
-        </ui:define>
-    </ui:composition>
+          </div>
+        
+        </ui:repeat>
+      
+      </div>
+    </div>
+  
+  </ui:define>
+</ui:composition>
 
 </html>
