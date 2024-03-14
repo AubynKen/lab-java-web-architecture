@@ -1,0 +1,13 @@
+body {
+    align-content: center;
+    align-items: center;
+}
+
+.form-container {
+    margin-top: -20vh;
+    width: 100%; /* Ensure the container takes full width */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}

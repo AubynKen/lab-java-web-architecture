@@ -1,0 +1,28 @@
+#product-container {
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+}
+
+body {
+    background-image:url(http://stuckincustoms.smugmug.com/Burning-Man/i-dd9xmfn/0/X3/The%20Steamy%20Car-X3.jpg);
+}
+
+.card-container {
+    color: white;
+}
+
+.card {
+    min-height: 90%;
+    margin-top: 10%;
+    background-color: black;
+    border: 3rem solid black;
+    opacity: 0.9;
+}
+
+.card img {
+    width: 100%;
+}
+
+.img-container {
+    margin: 1rem;
+}

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+
+<!--Comment: We have three html pages that share the same navigation bar, so the
+structure should be more or less similar for each page except for elements
+inside the body-->
+
+<faces-config version="4.0"
+              xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd">
+    
+    <!--Welcome page-->
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>goToShoppingCart</from-outcome>
+            <to-view-id>/shopping-cart.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToCatalogue</from-outcome>
+            <to-view-id>/catalogue.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToIndex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToNewProduct</from-outcome>
+            <to-view-id>/new-product.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!--Shopping Cart-->
+    <navigation-rule>
+        <from-view-id>/shopping-cart.xhtml</from-view-id>        
+        <navigation-case>
+            <from-outcome>goToShoppingCart</from-outcome>
+            <to-view-id>/shopping-cart.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToCatalogue</from-outcome>
+            <to-view-id>/catalogue.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToIndex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--Catalogue-->
+    <navigation-rule>
+        <from-view-id>/catalogue.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>goToShoppingCart</from-outcome>
+            <to-view-id>/shopping-cart.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToCatalogue</from-outcome>
+            <to-view-id>/catalogue.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToIndex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!--new product page-->
+    <navigation-rule>
+        <from-view-id>/new-product.xhtml</from-view-id>        
+        <navigation-case>
+            <from-outcome>goToShoppingCart</from-outcome>
+            <to-view-id>/shopping-cart.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToCatalogue</from-outcome>
+            <to-view-id>/catalogue.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>goToIndex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>

@@ -1,0 +1,31 @@
+body {
+    /*background: black;*/
+    text-align: center;
+    color: white;
+    background-image:url(https://photos.smugmug.com/Portfolio/i-KMjVHRd/1/FVPJxJD33dQg52xBJfQF8NkPTN8dMV4ZMJjZkBdwz/X3/Andramada-X3.jpg);
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 5vh;
+}
+
+.btn-new-product {
+    margin-top: 3vh;
+    border-radius: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.carousel-container {
+    margin-top: 3rem;
+}
+
+
+.carousel-inner-container {
+    display: flex !important;
+    justify-items: center !important;
+}
