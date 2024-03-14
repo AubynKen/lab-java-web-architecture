@@ -34,19 +34,6 @@
                        styleClass="form-control" required="true"/>
         </div>
         
-        <div class="form-group">
-          <h:outputLabel for="productDescription" value="Product Description:"/>
-          <h:inputTextarea id="productDescription"
-                           value="#{catalogueManager.description}"
-                           styleClass="form-control" required="true"/>
-        </div>
-        
-        <div class="form-group">
-          <h:outputLabel for="imageURI" value="Image URI:"/>
-          <h:inputText id="imageURI" styleClass="form-control"
-                       value="#{catalogueManager.imageURI}"/>
-        </div>
-        
         <h:commandButton value="Valider" action="#{catalogueManager.createProduct()}" styleClass="btn btn-primary"
                          style="width: 100%; margin-top: 10px;"/>
       

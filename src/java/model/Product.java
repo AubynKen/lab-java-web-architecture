@@ -1,19 +1,28 @@
 package model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 import java.io.Serial;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "PRODUCT")
 public class Product implements Serializable {
 
     // for version compatibility good practice
     @Serial
     private static final long serialVersionUID = 1L;
 
+    @Column(name = "ID")
     private Integer id;
+
+    @Column(name = "NAME")
     private String name;
+
+    @Column(name = "SELLING_PRICE")
     private Double price;
-    private String imageURI; // for displaying the product
-    private String description;
 
     public Product() {
     }
@@ -40,21 +49,5 @@ public class Product implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
-    }
-
-    public String getImageURI() {
-        return imageURI;
-    }
-
-    public void setImageURI(String imageURI) {
-        this.imageURI = imageURI;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 }
